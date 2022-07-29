@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+    python:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: python3.8
+        container_name: python3.8
+        restart: always
+        environment:
+            - VIRTUAL_HOST=
+            - LETSENCRYPT_HOST=
+            - LETSENCRYPT_EMAIL=
+        ports:
+            - 8080:8080
+
+networks:
+   default:
+     external:
+       name: nginx-proxy
