@@ -37,3 +37,5 @@ You can check the logs with `docker logs python3.8` or `docker-compose logs`
 
 You can check the status of your container with `docker ps -a`
 
+I personnonaly use a cron task every hour to reset the webpage and the ram used by python `0 * * * * docker-compose restart'
+
